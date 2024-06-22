@@ -1,3 +1,18 @@
+<button class="btn btn-primary" [disabled]="toggleButton" (click)="changeUserCreationStatus()">Add user</button>
+<div>{{userCreatedStatus}}</div>
+<div>{{toggleButton}}</div>
+<div [innerText]="toggleButton"></div> <!-- Property binding -->
+
+<div class="my-2">
+  <label> User name With Event Binding </label>
+  <input type="text" class="form-control" (input)="onUpdateUser($event)"/>
+  <div>Username : {{userName}}</div>
+</div>
+<div class="my-2">
+    <label> User Place With Two Way binding </label>
+  <input type="text" class="form-control" [(ngModel)]="userPlace"/>
+  <div>User Place: {{userPlace}}</div>
+</div>
 <app-user></app-user>
 <app-user></app-user>
 <app-user></app-user>
