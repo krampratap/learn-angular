@@ -1,1 +1,8 @@
-<div> Used {{userId}} is {{userStatus}}</div>
+<div class="my-2" [ngStyle] = "{ 'background-color' : getColor()}" [ngClass] = "{ offline : userStatus === 'Offline' }"> Used {{userId}} is {{userStatus}}</div>
+<div class="my-2" [ngStyle] = "{ backgroundColor : getColor()}"> Used {{userId}} is {{userStatus}}</div>
+
+<div>{{userName}}</div>
+<div>
+  <ng-content></ng-content>
+</div>
+

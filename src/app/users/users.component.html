@@ -14,5 +14,22 @@
   <div>User Place: {{userPlace}}</div>
 </div>
 <app-user></app-user>
-<app-user></app-user>
-<app-user></app-user>
+
+<div>
+  <h1>Communication between components</h1>
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" [(ngModel)]="userName" />
+    <button class="btn btn-primary" (click)="addUser()">Add user</button>
+  </div>
+
+  <div *ngFor="let user of userList" >
+    <app-user [userName]="user">
+      <div> Displaying in between components </div>
+    </app-user>
+  </div>
+
+  <div>
+    <input type="text" class="form-control" #userAddress /><!--Access dom element using # and @ViewChild -->
+  </div>
+</div>
