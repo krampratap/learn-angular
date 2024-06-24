@@ -3,6 +3,8 @@
 
 <div>{{userName}}</div>
 <div>
-  <ng-content></ng-content>
+  <ng-content></ng-content> <!-- Used to display content written between the component usage
+                                  Check line 28 in users.component.html
+                                  Useful where we cannot send HTML data to child component, Hence ng-content will replace-->
 </div>
 

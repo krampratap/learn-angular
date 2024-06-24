@@ -25,7 +25,7 @@
 
   <div *ngFor="let user of userList" >
     <app-user [userName]="user">
-      <div> Displaying in between components </div>
+      <div #userParagraph> Displaying in between components </div>
     </app-user>
   </div>
 

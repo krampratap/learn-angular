@@ -1,4 +1,4 @@
-import { Component, ViewChild , ElementRef, } from '@angular/core';
+import { Component, ViewChild , ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -7,14 +7,17 @@ import { Component, ViewChild , ElementRef, } from '@angular/core';
   //encapsulation: ViewEncapsulation.None
    //If we define any css at this component level .. it will be applied to the entire application if we remove Encapsulation
 })  //We can remove encapsulation and define in global.. it will be applied to all components
-export class UsersComponent {
+export class UsersComponent{
   //Property Binding
   toggleButton : boolean = true;
   userCreatedStatus : string = 'No user created';
   userName : string = '';
   userPlace : string = '';
-    userList: string[] =[];
-    @ViewChild('userAddress') userAddress: any ; //@ViewChild is used to get the DOM element
+  userList: string[] =[];
+
+  @ViewChild('userAddress') userAddress: ElementRef<HTMLInputElement> = {} as ElementRef;
+  //@ViewChild is used to get the DOM element with Element Ref and Native Element
+
   constructor() {
     setTimeout(() => {
       this.toggleButton = false;
@@ -38,7 +41,7 @@ export class UsersComponent {
     addUser(){
       this.userList.push(this.userName);
       console.log(this.userList);
-      console.log(this.userAddress.nativeElement.value);
+      console.log(this.userAddress.nativeElement.value); //Read value from @View Child
       }
 
 
