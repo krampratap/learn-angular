@@ -15,6 +15,7 @@ OnDestroy{
   //Interpolation
   userId: number = 10;
   userStatus: string = 'Offline';
+  isAvailable: boolean = true;
 
 @Input()
 userName: string='';
@@ -22,7 +23,7 @@ userName: string='';
     this.userStatus = Math.random() > 0.5 ? 'Offline' : 'Online'; //If Offline then styles is applied through ngClass
     console.log("constructor");
     }
-@ContentChild('userParagraph') userParagraph: ElementRef<HTMLInputElement> = {} as ElementRef; //REferenced from another component
+@ContentChild('userParagraph') userParagraph: ElementRef<HTMLInputElement> = {} as ElementRef; //Referenced from another component
 //@ViewChild you can access only in the same component
 
   ngOnInit(){
