@@ -30,11 +30,11 @@ interface Person {
 
 function logDetails(value: User | Person): void{
     //We cannot use type of to check interface types
-    // we have to use tagged interfaces
+    //we have to use tagged interfaces
     if(value.type==='user'){
-        console.log(value.email)
+        console.log(value.email) //only user related fields will be visible
     }
     else{
-        console.log(value.firstName)
+        console.log(value.firstName) //only user related fields will be visible
     }
 }

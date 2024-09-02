@@ -37,7 +37,7 @@ function printMenu(item: MenuItem){
 //error example 3
 //printMenu({name: "Tea", cost:10})
 
-//error example 4
+//working example 4
 printMenu({title: 'Tea', cost:10})
 
 // 4. self documenting

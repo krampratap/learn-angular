@@ -1,4 +1,4 @@
-// One way to make custom types is interfaces
+//One way to make custom types is interfaces
 //Also another way is type alias    
 
 //example 1: tuple

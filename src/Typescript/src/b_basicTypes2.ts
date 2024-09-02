@@ -2,7 +2,7 @@
 let nas:  string[] = ['maroi','hamilton']
 let ages: number[] =[12,34]
 ages.push(12)
-
+console.log(ages)
 //type inferences with arrrays
 let fruits = ['apples','mangoes','watermelon']
 fruits.push('peaches')
@@ -10,7 +10,7 @@ fruits.push('peaches')
 const fruit =fruits[3] //infering
 
 let things = [1,true,'hello'] //union of types
-const thing= things[0] //t type can be any one of the type 
+const thing= things[0] //thing type can be any one of the type 
 //object literals
 //have specific structure
 let user: {

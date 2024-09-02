@@ -3,7 +3,7 @@ function addTwoNumbers(a:number, b:number): number{
     return a+b
 }
 
-const subtractNumber = (a:number,b:number): number => a-b
+const subtractNumber = (a:number, b:number): number => a-b
 
 const res = addTwoNumbers(2,3)
 const res1 = subtractNumber(2,3)
